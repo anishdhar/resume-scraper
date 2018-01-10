@@ -6,7 +6,7 @@ import java.net.URL;
 
 /**
  * program to download resumes from bric.postech.ac.kr
- * @author anish
+ * @author anish dhar
  *
  */
 public class crawl {
@@ -168,29 +168,7 @@ public class crawl {
 	  */
 	 public static String encodeX(int num)
 	 {
-		 String finalString;
-		 
-		 if( num < 10)
-		 {
-			 finalString = "000000";
-		 }
-		 else if (num > 9 && num < 100)
-		 {
-			 finalString = "00000";
-
-		 }
-		 else if (num > 99 && num < 1000)
-		 {
-			 finalString = "0000";
-
-		 }
-		 else 
-		 {
-			 finalString = "000";
-
-		 }
-		
-		 return finalString + num;
+	 	String.format("%07d", num);
 	 }
 	}
 
